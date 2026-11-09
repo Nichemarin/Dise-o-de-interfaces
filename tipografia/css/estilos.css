@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* PASO 4.3: un @font-face por cada archivo de la fuente de texto */
+@font-face {
+  font-family: "Texto";
+  src: url("../fonts/Open_Sans/static/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Añade los bloques de Bold (700, normal) e Italic (400, italic) */
+@font-face {
+  font-family: "Texto";
+  src: url("../fonts/Open_Sans/static/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Texto";
+  src: url("../fonts/Open_Sans/static/OpenSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PASO 5: escala tipográfica */
+:root {
+  --fuente-titulos: "Montserrat", sans-serif;
+  --fuente-texto: "Texto", sans-serif;
+  --fs-h1: 4.375rem;
+  --fs-h2: 1.625rem;
+  --fs-h3: 1.25rem;
+  --fs-h4: 1.125rem;
+  --fs-texto: 1rem;
+  --fs-pie: 1rem;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: var(--fs-texto);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+p {
+  max-width: 65ch;
+}
+
+.descartada {
+  font-family: "Nombre de la fuente descartada", sans-serif;
+}
